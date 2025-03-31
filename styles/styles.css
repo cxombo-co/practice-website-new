@@ -4,30 +4,35 @@ html, body {
     height: 100%;
 }
 
+nav a:hover {
+    background-color: #313d73;
+    color: white;
+  }
 
 .menu-container {
     display: flex;
     margin-top: -10px;
     margin-left: -10px;
     justify-content: center;
-    background-color: rgb(255, 221, 153);
+    background-color: #E3F2FD;
     height: 8vh;
     padding: 8px;
     width: 100%;
-    border: 2px solid #e7c673;
+    min-width: 800px;
+    border: 2px solid #90CAF9;
 }
 
 .menu-content {
     display: flex;
     flex-grow: 1;
     max-width: 95%;
+    align-items: center;
 }
 
 .logo {
     display: flex;
     margin-left: 5px;
     flex-basis: auto;
-    flex-shrink: 1;
 }
 
 
@@ -36,7 +41,7 @@ html, body {
     align-self: center;
     max-width: 3rem;
     margin-left: -30px;
-    margin-top: 0.70rem;
+    margin-top: 0.5rem;
 }
 
 
@@ -55,20 +60,19 @@ html, body {
     flex-grow: 1;
     align-items: center;
     flex-direction: row;
-    gap: 4%;
+    gap: 2.5rem;
     max-width: 75rem;
-    font-size: 1.25rem;
-    color: rgb(255, 255, 255);
+    color: #37474F;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    margin-top: 1.7rem;
+    margin-top: 4vh;
 }
 
 .background {
     display: flex;
     height: calc(100vh - 8vh);
     width: 100%;
-    background-color: rgb(255, 247, 223);
+    background-color: #E3F2FD;
 }
 
 .search-bar[type=text] {
@@ -78,9 +82,51 @@ html, body {
     height: 30px;
     padding: 6px;
     align-self: center;
-    border: 2px solid #e7c673;
-    width: 15%;
-    height: 60%;
+    border: 2px solid #90CAF9;
+    width: calc(10% + 5vw);
+    height: auto;
     margin-top: 0.70rem;
-    background-color: rgb(255, 247, 223);
+   background-color: #E3F2FD;
+}
+
+.main-content, .center-big {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main-content > .center-big {
+    justify-content: center;
+    max-height: 50%;
+    background-color: #BBDEFB;
+    flex-direction: column;
+    align-items: center;
+}
+
+#motto, #claim {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-big > #motto {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    color: #393939;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: clamp(1rem, 2vw, 3rem);
+    max-height: 20%;
+    max-width: 50%;
+    text-align: center;
+}
+
+.center-big > #claim {
+    max-width: 50%;
+    max-height: 30%;
+    margin-top: 2vh;
+    color: #4d4d4d;
+    font-family: sans-serif;
+    font-size: clamp(1rem, 1vw, 2rem);
+    text-align: center;
+    
+    
 }

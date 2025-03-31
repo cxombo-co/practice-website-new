@@ -8,14 +8,20 @@
     <style>
         a {
             text-decoration: none;
-            color: white;
+            font-size: clamp(0.8rem, 2vw, 3rem);
+            color: #393939;
+            text-shadow: 1.5px 1px 1px rgba(127, 127, 127, 0.5); /* Subtle shadow effect */
+            padding: 8px 12px;
+            background-color: transparent;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
         }
     </style>
 </head>
 <body>
     <div class="menu-container">
         <div class="menu-content">
-            <div class="logo"><img src="https://img.freepik.com/free-psd/gradient-abstract-logo_23-2150689652.jpg" alt="logo"></div>
+            <div class="logo"><img src="images/website-logo.png" alt="logo"></div>
             <nav class="navigation">
                 <ul>
                     <li><a href="pages/page-one.html">Home</a></li>
@@ -29,7 +35,12 @@
         </div>
     </div>
     <div class="background">
-        
+        <div class="main-content">
+            <div class="center-big">
+                <div id="motto">Learn how to make a live robot</div>
+                <div id="claim">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum alias assumenda fugit dolorem eveniet accusamus voluptate, nulla ex quos optio ut doloribus omnis illo illum tenetur magnam ipsum eaque.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
