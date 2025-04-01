@@ -8,13 +8,13 @@
     <style>
         a {
             text-decoration: none;
-            font-size: clamp(0.8rem, 2vw, 3rem);
-            color: #393939;
-            text-shadow: 1.5px 1px 1px rgba(127, 127, 127, 0.5); /* Subtle shadow effect */
             padding: 8px 12px;
-            background-color: transparent;
             border-radius: 8px;
+            background-color: transparent;
             transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+        }
+        a:link, a:visited {
+            color: #37474F;
         }
     </style>
 </head>
@@ -24,14 +24,14 @@
             <div class="logo"><img src="images/website-logo.png" alt="logo"></div>
             <nav class="navigation">
                 <ul>
-                    <li><a href="pages/page-one.html">Home</a></li>
-                    <li><a href="pages/page-two.html">Learn</a></li>
-                    <li><a href="pages/page-three.html">Support</a></li>
-                    <li><a href="pages/page-four.html">About Us</a></li>
-                    <li><a href="pages/page-five.html">More</a></li>
+                    <li class="menu-effect"><a href="pages/page-one.html">Home</a></li>
+                    <li class="menu-effect"><a href="pages/page-two.html">Learn</a></li>
+                    <li class="menu-effect"><a href="pages/page-three.html">Support</a></li>
+                    <li class="menu-effect"><a href="pages/page-four.html">About Us</a></li>
+                    <li class="menu-effect"><a href="pages/page-five.html">More</a></li>
                 </ul>
             </nav>
-            <input type="text" class="search-bar" placeholder="Search...">
+            <input type="text" class="search-bar" placeholder="Search Pages...">
         </div>
     </div>
     <div class="background">

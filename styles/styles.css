@@ -4,77 +4,135 @@ html, body {
     height: 100%;
 }
 
+h2 {
+    font-family: 'Gill Sans';
+    color: #031d29;
+}
+
+
+/* This changes the way an item in the menu navigation looks when
+hovered over */
 nav a:hover {
     background-color: #313d73;
     color: white;
   }
 
+
+/* Container is the light blue box that holds the content */
 .menu-container {
     display: flex;
-    margin-top: -10px;
-    margin-left: -10px;
     justify-content: center;
     background-color: #E3F2FD;
     height: 8vh;
     padding: 8px;
     width: 100%;
     min-width: 800px;
-    border: 2px solid #90CAF9;
+    border: 2px solid #859baded;
+    flex-direction: column;
 }
 
+
+/*Handles 'Home' 'Learn'  INDIVIDUALLY etc.. on a vertical axis */
 .menu-content {
     display: flex;
     flex-grow: 1;
     max-width: 95%;
     align-items: center;
+    font-size: clamp(0.8rem, 2vw, 3rem);
+    color: #393939;
+    text-shadow: 1.5px 1px 1px rgba(127, 127, 127, 0.5); /* Subtle shadow effect  behind text*/
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 8vh;
+    
 }
 
-.logo {
+/*Handles literally just the gap on the menu & no bullet points */
+.navigation ul {
+    list-style: none;
     display: flex;
-    margin-left: 5px;
-    flex-basis: auto;
+    gap: 2.5rem;
+    
 }
 
-
-.logo img {
-    display: flex;
-    align-self: center;
-    max-width: 3rem;
-    margin-left: -30px;
-    margin-top: 0.5rem;
-}
-
-
+/*Handles 'Home' 'Learn' etc as a GROUP on a horizontal axis */
 .navigation {
     display: flex;
     flex-grow: 1;
     max-width: 90%;
-    justify-content: start;
-    margin-left: -2rem;
+    margin-left: -3rem;
     
 }
 
-.navigation ul {
-    list-style: none;
+
+
+
+/*Just the logo */
+.logo img {
+    flex-basis: auto;
     display: flex;
-    flex-grow: 1;
-    align-items: center;
-    flex-direction: row;
-    gap: 2.5rem;
-    max-width: 75rem;
-    color: #37474F;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    margin-top: 4vh;
+    align-self: center;
+    max-width: 3rem;
+    margin-left: -2vh;
+    margin-top: 2vhrem;
+    margin-bottom: 1vhrem;
 }
 
+
+/*Handles light blue/dark blue main background */
 .background {
     display: flex;
     height: calc(100vh - 8vh);
-    width: 100%;
     background-color: #E3F2FD;
+    flex-direction: column;
+    align-items: center;
 }
 
+/*This is specific to page 2 (prolly other pages in future) where background is given an ID to change the height for this page specifically */
+#specific-back {
+    height: auto;
+}
+
+/*Handles upper dark blue box height */
+.main-content, .center-big {
+    display: flex;
+    flex-grow: 1;
+    max-height: 60%;
+    flex-direction: column;
+}
+
+
+/*Holds the #motto contents and #claim (general styling) */
+.center-big {
+    background-color: #BBDEFB;
+    align-items: center;
+    justify-content: center;
+    color: #393939;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/*Specific motto styling*/
+#motto {
+    font-weight: bold;
+    margin-bottom: 2vh;
+    font-size: clamp(1rem, 2vw, 3rem);
+    max-height: 20%;
+    max-width: 50%;
+}
+
+/*Specific claim styling*/
+.center-big > #claim {
+    max-width: 50%;
+    max-height: 30%;
+    margin-top: 2vh;
+    color: #4d4d4d;
+    font-size: clamp(1rem, 1vw, 2rem);
+    
+}
+
+
+/*Search bar at top right*/
 .search-bar[type=text] {
     display: flex;
     margin-right: 0;
@@ -82,51 +140,34 @@ nav a:hover {
     height: 30px;
     padding: 6px;
     align-self: center;
-    border: 2px solid #90CAF9;
+    border: 2px solid #859baded;
     width: calc(10% + 5vw);
     height: auto;
     margin-top: 0.70rem;
    background-color: #E3F2FD;
 }
 
-.main-content, .center-big {
+
+#title-two, #title-three {
     display: flex;
-    flex-grow: 1;
-}
-
-.main-content > .center-big {
-    justify-content: center;
-    max-height: 50%;
-    background-color: #BBDEFB;
+    text-align: center;
+    margin-bottom: -1.5vh;
     flex-direction: column;
-    align-items: center;
+    
 }
 
-#motto, #claim {
+#video-box {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem; /* Add space between videos */
+    justify-content: center; /* Center videos horizontally */
+    margin-top: 2rem; /* Add space above video box */
 }
 
-.center-big > #motto {
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-    color: #393939;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: clamp(1rem, 2vw, 3rem);
-    max-height: 20%;
-    max-width: 50%;
-    text-align: center;
-}
-
-.center-big > #claim {
-    max-width: 50%;
-    max-height: 30%;
-    margin-top: 2vh;
-    color: #4d4d4d;
-    font-family: sans-serif;
-    font-size: clamp(1rem, 1vw, 2rem);
-    text-align: center;
-    
-    
+.styled-iframe {
+    width: 20rem;
+    height: 15rem;
+    border: none; /* Remove border if not needed */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
