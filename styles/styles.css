@@ -159,15 +159,32 @@ nav a:hover {
 #video-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem; /* Add space between videos */
+    gap: 2rem; /* Add space between videos */
     justify-content: center; /* Center videos horizontally */
     margin-top: 2rem; /* Add space above video box */
+    border: solid;
 }
 
 .styled-iframe {
-    width: 20rem;
-    height: 15rem;
-    border: none; /* Remove border if not needed */
-    border-radius: 10px; /* Optional rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    width: 18rem;
+    height: 14rem;
+}
+
+.desc-box {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    height: 8rem;;
+    margin-top: -2.5rem;
+    justify-items: start;
+}
+
+.desc-box > .desc-head {
+    flex-direction: column;
+
+}
+
+.desc-box > .desc-body {
+
+    margin-top: -1.2rem;
 }
